@@ -1,0 +1,12 @@
+n = int(input())
+arr = list(map(int, input().split()))
+
+total = 0
+
+for i in range(n):
+    distinct = set()
+    for j in range(i, n):
+        distinct.add(arr[j])
+        total += len(distinct) ** 2
+
+print(total)
